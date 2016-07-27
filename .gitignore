@@ -1,2 +1,9 @@
+<<<<<<< HEAD
+node_modules
+package.json
+.jscsrc
+gulpfile.js
+=======
 node_modules/
 .DS_STORE
+>>>>>>> master
