@@ -1,7 +1,24 @@
+<<<<<<< HEAD
 main {
   margin-left: 15%;
 }
 
 .carousel {
   height: 300px;
+=======
+.navColor {
+  background-color: #a3a3c2;
+  opacity: .8;
+
+
+}
+body {
+  background-image:url(Images/skate-wallpaper.jpg);
+  background-size: stretch;
+
+}
+
+.noColor {
+  opacity: 1
+>>>>>>> master
 }
