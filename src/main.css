@@ -1,24 +1,71 @@
-<<<<<<< HEAD
 main {
-  margin-left: 15%;
+  margin-left: 18%;
 }
 
 .carousel {
-  height: 300px;
-=======
+  display: inline-block;
+  height: 500px;
+  width: 100%;
+}
+
 .navColor {
   background-color: #a3a3c2;
   opacity: .8;
-
-
 }
-body {
-  background-image:url(Images/skate-wallpaper.jpg);
-  background-size: stretch;
 
+body {
+  background-image: url('images/skate-wallpaper.jpg');
+  background-size: stretch;
+  /*background-repeat: no-repeat;*/
 }
 
 .noColor {
-  opacity: 1
->>>>>>> master
+  opacity: 1;
+}
+
+.promos {
+  display: inline-block;
+  box-sizing: border-box;
+  height: auto;
+  margin: 25px;
+  width: auto;
+
+  border: 2px solid black;
+  background-color: rgba(56, 78, 130, .5);
+}
+
+.promos img {
+  margin: 25px;
+  opacity: .8;
+}
+
+.signup {
+  width: 80%;
+  margin: 0 12% 30px auto;
+  text-align: center;
+  border: 2px solid black;
+  background-color: rgba(56, 78, 130, .5);
+}
+
+.signup-form {
+  width: 100%;
+  margin
+}
+
+.signup-input {
+  height: 50px;
+  width: 80%;
+  margin: 30px;
+  text-align: center;
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+.signup-btn {
+  display: inline-block;
+  background-image: url('images/sendit.svg');
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+  vertical-align: middle;
 }
