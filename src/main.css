@@ -13,3 +13,18 @@ body {
 .noColor {
   opacity: 1
 }
+
+
+.footerLinks,
+.footer-h3,
+.map {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+legal {
+  text-align: center;
+  clear: both;
+  display: block;
+}
