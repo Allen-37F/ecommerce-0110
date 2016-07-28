@@ -8,7 +8,6 @@ h1, h2, h3, h4 {
   font-family: "vtks-rash", sans-serif;
 }
 
-
 main {
   margin-left: 238px;
 }
@@ -212,4 +211,15 @@ legal {
 .sortBtn {
   display: inline-block;
   position: relative;
+}
+
+.footerJerk {
+  max-height: 280px;
+  display:inline-block;
+
+}
+
+.cartPic {
+  max-width: 100px;
+  padding: 5px;
 }
