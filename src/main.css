@@ -4,8 +4,14 @@
   format("truetype");
 }
 
+
 h1, h2, h3, h4 {
+<<<<<<< HEAD
   font-family: "vtks-rash", sans-serif;
+=======
+
+  font-family: "vtks-rash", sans-serif
+>>>>>>> master
 }
 
 
