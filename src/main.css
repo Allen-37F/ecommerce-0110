@@ -42,7 +42,7 @@ body {
 .carouselBox li {
   background-color: transparent;
   width: 100%;
-  display: none;
+  /*display: none;*/
 }
 
 .carouselBox img {
@@ -62,19 +62,6 @@ body {
 .prev {
   left: 50px;
 }
-
-/*.carousel {
-  height: 300px;
-  width: 100%;
-}
-
-.carouselBox {
-  display: none;
-}
-
-.active {
-  display: inline-block;
-}*/
 
 
 .promos {
@@ -140,9 +127,9 @@ body {
 }
 
 .myCart{
-  /*position: fixed;
+  position: fixed;
   top:5px;
-  right:25px;*/
+  right:25px;
   width: 250px;
   height: 65px;
 }

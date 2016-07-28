@@ -1,18 +1,59 @@
 $( document ).ready(function() {
     console.log( "ready!" );
 
-    var allPhotos = $('.carouselBox li');
+    var imgDisplayTime = 4000;
+    var transition_speed = 0;
 
-    console.log(allPhotos);
+    var carouselSlide = $('.carouselBox');
+    var listItems = carouselSlide.children('li');
+    var listLen = listItems.length;
+    var i = 0;
 
-    function cyclePhotos () {
-      for(li in allPhotos) {
-        $('li').css('display', 'inline-block');
-        $('li').fadeIn(200).delay(2000).fadeOut(200);
-        
-      }
+    var changeList = function() {
+
+      listItems.eq(i).fadeOut(transition_speed, function () {
+        i += 1;
+        if (i === listLen) {
+          i = 0;
+        }
+        listItems.eq(i).fadeIn(transition_speed);
+      });
+
+    };
+
+    var reverseList = function() {
+
+      listItems.eq(i).fadeOut(transition_speed, function () {
+        i -= 1;
+        if (i === listLen) {
+          i = 0;
+        }
+        listItems.eq(i).fadeIn(transition_speed);
+      });
+
+    };
+
+    listItems.not(':first').hide();
+
+    var newInterval = function(){
+      clearInterval(interval)
+      imgDisplayTime = 4000;
+      interval = setInterval(changeList, imgDisplayTime);
     }
 
+    var interval = setInterval(newInterval, imgDisplayTime)
+    newInterval(changeList, imgDisplayTime);
+
+
+    $('.next').on('click', function() {
+      newInterval();
+      changeList();
+    })
+
+    $('.prev').on('click', function() {
+      newInterval();
+      reverseList();
+    })
 
     //This code works, but won't reset the timer or cycle images on it's own once clicked. Gonna start fresh.
 
