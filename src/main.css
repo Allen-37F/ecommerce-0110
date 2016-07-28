@@ -13,12 +13,6 @@ main {
   margin-left: 238px;
 }
 
-.carousel {
-  display: inline-block;
-  height: 500px;
-  width: 100%;
-}
-
 .navColor {
   background-color: #a3a3c2;
   opacity: .8;
@@ -35,6 +29,53 @@ body {
 .noColor {
   opacity: 1;
 }
+
+/* Carousel */
+
+.carouselBox {
+  width: 1200px;
+  background-color: transparent;
+  margin: 20px auto;
+  text-align: center;
+  position: relative;
+}
+.carouselBox div {
+  background-color: transparent;
+  width: 100%;
+  display: inline-block;
+  display: none;
+}
+.carouselBox img {
+  width: 1200px;
+  max-height: 500px;
+}
+
+.carBtn {
+  position: absolute;
+  margin-top: 450px;
+}
+
+.next {
+  right: 50px;
+}
+
+.prev {
+  left: 50px;
+}
+
+/*.carousel {
+  height: 300px;
+  width: 100%;
+}
+
+.carouselBox {
+  display: none;
+}
+
+.active {
+  display: inline-block;
+}*/
+
 
 .promos {
   display: inline-block;
@@ -99,9 +140,9 @@ body {
 }
 
 .myCart{
-  position: fixed;
+  /*position: fixed;
   top:5px;
-  right:25px;
+  right:25px;*/
   width: 250px;
   height: 65px;
 }
