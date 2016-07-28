@@ -12,38 +12,34 @@
       <a href="index.html"><img id="logo" src="images/logo-main.jpg" alt="haha oops our logo didn't load but rest assured it's pretty cool"></a>
       <h2 style="text-align: center">Stack O.F. Boards</h2>
       <div>
-        <ul class="nav navbar-nav ">
-          <li class=""><a href="products.html" class="dropdown-toggle " data-toggle="dropdown" role="button"> OnBoard Yourself <span class="caret"></span></a>
-            <div class="dropdown-menu dropdown-hover" role="menu">
-              <ul>
-                <li class="dropdown-content"><a href="products.html">Skateboards</a></li>
-                <li class="dropdown-content"><a href="#">Fingerboards</a></li>
-                <li><a href="#">Megaboards</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Safety Gear</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Tools and Swag</a></li>
-              </ul>
-            </div>
-          </li>
-          <li><a href="checkout.html">Checkout</a></li>
-          <li><a href="bonus.html">Bonus Features!</a></li>
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Stack yOselF</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="products.html" class="regular">S.O.F. Skateboards</a>
+            <a href="products.html" class="mini">S.O.F. FingerBoards</a>
+            <a href="products.html" class="brokeAF">S.O.F. Broken Boards</a>
+            <a href="products.html" class="yuge">S.O.F. Megaboards</a>
+          </div>
+        </div>
+        <div class="otherlinks">
+          <a href="checkout.html">Checkout</a>
           <br>
-        </ul>
+          <a href="bonus.html">Bonus Features!</a>
+        </div>
+        <nav>
+          <a href="checkout.html" class="btn myCart btn-block"> <img class="col-xs-4" src="images/cart.png" alt="cart" /> Shopping Cart
+            <br>Items: 3  |  Total: $110.11
+          </a>
+        </nav>
         <form class="navbar-form navbar-left" id="emailForm">
           <img id="board" src="images/board-short.png" alt="oops this is supposed to be a picture"  class="col-md-12"/>
           <div class="form-group">Sign up for our newsletter!
-            <input type="email" class="form-control" placeholder="Your email address">
+            <input id="header-email" type="email" class="form-control" placeholder="Your email address">
           </div>
           <button type="submit" style="position: center" class="btn btn-default">Submit</button>
+          <div id="header-message"></div>
         </form>
       </div>
-    </nav>
-
-    <nav>
-      <a href="checkout.html" class="btn myCart btn-block"> <img class="col-xs-4" src="images/cart.png" alt="cart" /> Shopping Cart
-        <br>Items: 3  |  Total: $110.11
-      </a>
     </nav>
 
     <main>
@@ -57,9 +53,12 @@
         <img src="images/productimg/low.jpg" height="200" width="400">
         <img src="images/productimg/joker.jpeg">
       </section>
+      <section>
+        <div id="input-message"></div>
+      </section>
       <section id="signup" class="signup">
-        <form class="signup-form">
-          <input type="email" class="signup-input" placeholder="Do you like rad shit? Type your email then, as always, send it!">
+        <form id="signup-form">
+          <input id="signup-input" type="email" class="signup-input" placeholder="Do you like rad shit? Type your email then, as always, send it!"></input>
           <button class="signup-btn"></button>
         </form>
       </section>

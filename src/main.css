@@ -52,6 +52,24 @@ body {
   opacity: .8;
 }
 
+#input-message {
+  height: 50px;
+}
+
+.input-succ {
+  color: green;
+  font-size: 20px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.input-err {
+  color: red;
+  font-size: 20px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
 .signup {
   width: 80%;
   margin: 0 12% 30px auto;
@@ -81,7 +99,7 @@ body {
 }
 
 .signup-btn {
-  display: inline-block;
+  display: block;
   background-image: url('images/sendit.svg');
   background-repeat: no-repeat;
   width: 60px;
@@ -91,39 +109,65 @@ body {
 }
 
 .navbar {
-  max-width: 238px;
+  width: 238px;
   display: inline-block;
   position: fixed;
   height: 100%;
-
 }
 
 .myCart{
-  position: fixed;
-  top:5px;
-  right:25px;
   width: 250px;
   height: 65px;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+.dropbtn button:hover {
+  background-color: #847EC2;
 }
 
+.dropbtn {
+  background-color: #a3a3c2;
+  border: none;
+  margin-left: 10px;
+}
+
+/* The container <div> - needed to position the dropdown content */
 .dropdown {
     position: relative;
     display: inline-block;
 }
 
+/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
+    background-color: #8467C2;
+    opacity: 1;
+    z-index: 20;
+    margin-left: 100px;
+    margin-top: -20px;
 }
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #847EC2}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+.otherlinks > a {
+  color: black;
+  margin-left: 15px;
+  margin-top: 25px;
+}
+
 
 #board {
   max-width: 180px;
@@ -140,6 +184,8 @@ footer {
   margin-left: 238px;
   bottom: -20px;
   /*left: 0;*/
+  z-index: 0;
+
 }
 
 .footerLinks,
