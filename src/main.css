@@ -223,3 +223,10 @@ legal {
   max-width: 100px;
   padding: 5px;
 }
+
+.billForm, .shipForm {
+  padding: 20px;
+  margin: 20px;
+  border-radius: 30px;
+
+}
