@@ -15,4 +15,12 @@ $( document ).ready(function() {
   };
   getProductInfo();
 
+  $('#priceSort').on('click', function(event) {
+    // $('.fullProduct').sort(function(a, b){return a-b});
+  })
+
+  $('#sizeSort').on('click', function(event) {
+
+  })
+
 });

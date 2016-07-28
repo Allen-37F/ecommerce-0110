@@ -208,3 +208,8 @@ legal {
   max-width: 250px;
   margin: 0 auto;
 }
+
+.sortBtn {
+  display: inline-block;
+  position: relative;
+}
