@@ -13,12 +13,6 @@ main {
   margin-left: 238px;
 }
 
-.carousel {
-  display: inline-block;
-  height: 500px;
-  width: 100%;
-}
-
 .navColor {
   background-color: #a3a3c2;
   opacity: .8;
@@ -35,6 +29,40 @@ body {
 .noColor {
   opacity: 1;
 }
+
+/* Carousel */
+
+.carouselBox {
+  width: 1200px;
+  background-color: transparent;
+  margin: 20px auto;
+  text-align: center;
+  position: relative;
+}
+.carouselBox li {
+  background-color: transparent;
+  width: 100%;
+  /*display: none;*/
+}
+
+.carouselBox img {
+  width: 1200px;
+  max-height: 500px;
+}
+
+.carBtn {
+  position: absolute;
+  margin-top: 450px;
+}
+
+.next {
+  right: 50px;
+}
+
+.prev {
+  left: 50px;
+}
+
 
 .promos {
   display: inline-block;
