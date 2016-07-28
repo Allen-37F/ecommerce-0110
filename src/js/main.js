@@ -52,60 +52,66 @@ $( document ).ready(function() {
     }
   }
 
-    var imgDisplayTime = 4000;
-    var transition_speed = 0;
+  var imgDisplayTime = 4000;
+  var transition_speed = 0;
 
-    var carouselSlide = $('.carouselBox');
-    var listItems = carouselSlide.children('li');
-    var listLen = listItems.length;
-    var i = 0;
+  var carouselSlide = $('.carouselBox');
+  var listItems = carouselSlide.children('li');
+  var listLen = listItems.length;
+  var i = 0;
 
-    var changeList = function() {
+  var changeList = function() {
 
-      listItems.eq(i).fadeOut(transition_speed, function () {
-        i += 1;
-        if (i === listLen) {
-          i = 0;
-        };
-        listItems.eq(i).fadeIn(transition_speed);
-      });
+    listItems.eq(i).fadeOut(transition_speed, function () {
+      i += 1;
+      if (i === listLen) {
+        i = 0;
+      };
+      listItems.eq(i).fadeIn(transition_speed);
+    });
 
-    };
+  };
 
-    var reverseList = function() {
+  var reverseList = function() {
 
-      listItems.eq(i).fadeOut(transition_speed, function () {
-        i -= 1;
-        if (i === listLen) {
-          i = 0;
-        };
-        listItems.eq(i).fadeIn(transition_speed);
-      });
+    listItems.eq(i).fadeOut(transition_speed, function () {
+      i -= 1;
+      if (i === listLen) {
+        i = 0;
+      };
+      listItems.eq(i).fadeIn(transition_speed);
+    });
 
-    };
+  };
 
-    listItems.not(':first').hide();
+  listItems.not(':first').hide();
 
-    var newInterval = function(){
-      clearInterval(interval);
-      imgDisplayTime = 4000;
-      interval = setInterval(changeList, imgDisplayTime);
-    }
+  var newInterval = function(){
+    clearInterval(interval);
+    imgDisplayTime = 4000;
+    interval = setInterval(changeList, imgDisplayTime);
+  }
 
-    var interval = setInterval(newInterval, imgDisplayTime);
-    newInterval(changeList, imgDisplayTime);
+  var interval = setInterval(newInterval, imgDisplayTime);
+  newInterval(changeList, imgDisplayTime);
 
 
-    $('.next').on('click', function() {
+  $('.next').on('click', function() {
       newInterval();
       changeList();
-    });
+  });
 
-    $('.prev').on('click', function() {
-      newInterval();
-      reverseList();
-    });
-    
+  $('.prev').on('click', function() {
+    newInterval();
+    reverseList();
+  });
+
+  //Promo Image Generation
+
+  // function createPromos() {
+  //
+  // createPromos();
+
 });
 
 function wiggle(id, px, time) {

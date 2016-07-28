@@ -68,7 +68,7 @@ body {
   display: inline-block;
   box-sizing: border-box;
   height: auto;
-  margin: 25px;
+  margin: 150px;
   width: auto;
 
   border: 2px solid black;
@@ -78,6 +78,18 @@ body {
 .promos img {
   margin: 25px;
   opacity: .8;
+  display: inline-block;
+  max-height: 250px;
+  max-width: 250px;
+}
+
+.promos p {
+  text-align: center;
+  color: white;
+}
+
+.promoItem {
+  display: inline-block;
 }
 
 .signup {
