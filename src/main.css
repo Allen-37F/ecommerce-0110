@@ -239,5 +239,10 @@ legal {
 .footerJerk {
   max-height: 280px;
   display:inline-block;
-  
+
+}
+
+.cartPic {
+  max-width: 100px;
+  padding: 5px;
 }
