@@ -39,12 +39,12 @@ body {
   text-align: center;
   position: relative;
 }
-.carouselBox div {
+.carouselBox li {
   background-color: transparent;
   width: 100%;
-  display: inline-block;
   display: none;
 }
+
 .carouselBox img {
   width: 1200px;
   max-height: 500px;
