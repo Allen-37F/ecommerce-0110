@@ -6,8 +6,12 @@
 
 
 h1, h2, h3, h4 {
+<<<<<<< HEAD
+  font-family: "vtks-rash", sans-serif;
+=======
 
   font-family: "vtks-rash", sans-serif
+>>>>>>> master
 }
 
 
@@ -35,7 +39,8 @@ body {
 /* Carousel */
 
 .carouselBox {
-  width: 1200px;
+  display: block;
+  width: 100%;
   background-color: transparent;
   margin: 20px auto;
   text-align: center;
@@ -48,7 +53,7 @@ body {
 }
 
 .carouselBox img {
-  width: 1200px;
+  width: 95%;
   max-height: 500px;
 }
 
@@ -101,7 +106,7 @@ body {
 }
 
 .signup {
-  width: 80%;
+  width: 85%;
   margin: 0 12% 30px auto;
   text-align: center;
   /*background-color: rgba(56, 78, 130, .5);*/
@@ -129,7 +134,7 @@ body {
 }
 
 .signup-btn {
-  display: block;
+  display: inline-block;
   background-image: url('images/sendit.svg');
   background-repeat: no-repeat;
   width: 60px;

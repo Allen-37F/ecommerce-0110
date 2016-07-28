@@ -1,7 +1,6 @@
 $( document ).ready(function() {
     console.log( "ready!" );
 
-<<<<<<< HEAD
     var email;
 
     $('#signup-form').on('submit', function(e) {
@@ -50,7 +49,7 @@ $( document ).ready(function() {
       }
     }
   }
-=======
+
     var imgDisplayTime = 4000;
     var transition_speed = 0;
 
@@ -65,7 +64,7 @@ $( document ).ready(function() {
         i += 1;
         if (i === listLen) {
           i = 0;
-        }
+        };
         listItems.eq(i).fadeIn(transition_speed);
       });
 
@@ -77,7 +76,7 @@ $( document ).ready(function() {
         i -= 1;
         if (i === listLen) {
           i = 0;
-        }
+        };
         listItems.eq(i).fadeIn(transition_speed);
       });
 
@@ -86,24 +85,24 @@ $( document ).ready(function() {
     listItems.not(':first').hide();
 
     var newInterval = function(){
-      clearInterval(interval)
+      clearInterval(interval);
       imgDisplayTime = 4000;
       interval = setInterval(changeList, imgDisplayTime);
     }
 
-    var interval = setInterval(newInterval, imgDisplayTime)
+    var interval = setInterval(newInterval, imgDisplayTime);
     newInterval(changeList, imgDisplayTime);
 
 
     $('.next').on('click', function() {
       newInterval();
       changeList();
-    })
+    });
 
     $('.prev').on('click', function() {
       newInterval();
       reverseList();
-    })
+    });
 
     //This code works, but won't reset the timer or cycle images on it's own once clicked. Gonna start fresh.
 
@@ -142,7 +141,6 @@ $( document ).ready(function() {
     //   }
     //   cycleItems();
     // });
->>>>>>> master
 
 });
 
