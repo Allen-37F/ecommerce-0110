@@ -6,251 +6,327 @@
     <link rel="stylesheet" href="main.css">
     <title>Checkout - StackOFBoards</title>
   </head>
+
+  </head>
   <body>
-    <h2>Complete your order</h2>
+
+<!-- Navigation  -->
+        <nav class=" container navbar navColor" >
+          <a href="index.html"><img id="logo" src="images/logo-main.jpg" alt="haha oops our logo didn't load but rest assured it's pretty cool"></a>
+          <h2 style="text-align: center">Stack O.F. Boards</h2>
+          <div>
+            <div class="dropdown">
+              <button onclick="myFunction()" class="dropbtn">Stack yOselF</button>
+              <div id="myDropdown" class="dropdown-content">
+                <a href="products.html" class="regular">S.O.F. Skateboards</a>
+                <a href="products.html" class="mini">S.O.F. FingerBoards</a>
+                <a href="products.html" class="brokeAF">S.O.F. Broken Boards</a>
+                <a href="products.html" class="yuge">S.O.F. Megaboards</a>
+              </div>
+            </div>
+            <div class="otherlinks">
+              <a href="checkout.html">Checkout</a>
+              <br>
+              <a href="bonus.html">Bonus Features!</a>
+            </div>
+            <nav>
+              <a href="checkout.html" class="btn myCart btn-block"> <img class="col-xs-4" src="images/cart.png" alt="cart" /> Shopping Cart
+                <br>Items: 3  |  Total: $110.11
+              </a>
+            </nav>
+            <form class="navbar-form navbar-left" id="emailForm">
+              <img id="board" src="images/board-short.png" alt="oops this is supposed to be a picture"  class="col-md-12"/>
+              <div class="form-group">Sign up for our newsletter!
+                <input id="header-email" type="email" class="form-control" placeholder="Your email address">
+              </div>
+              <button type="submit" style="position: center" class="btn btn-default">Submit</button>
+              <div id="header-message"></div>
+            </form>
+          </div>
+        </nav>
+
+        <main>
+
 
 <!-- Shipping Address Information Form -->
-    <form class="form-horizontal navColor shipForm container col-xs-4">
-      <fieldset>
-        <legend>Enter Shipping Information</legend>
-        <div class="form-group">
-          <label for="firstNameShip" class="col-lg-2 control-label">Full Name</label>
-          <div class="col-lg-5">
-            <input type="text" class="form-control" id="firstNameShip" placeholder="First Name" required>
-            <input type="text" class="form-control" id="lastNameShip" placeholder="Last Name" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="Address1Ship" class="col-lg-2 control-label">Address Line 1</label>
-          <div class="col-lg-8">
-            <input type="text" class="form-control" id="address1Ship" placeholder="Address" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="Address2ship" class="col-lg-2 control-label">Address Line 2</label>
-          <div class="col-lg-6">
-            <input type="text" class="form-control" id="address2Ship" placeholder="Apt. #">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="cityShip" class="col-lg-2 control-label">City</label>
-          <div class="col-lg-5">
-            <input type="text" class="form-control" id="cityShip" placeholder="City" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="state" class="col-lg-2 control-label">State</label>
-          <div class="col-lg-4">
-            <select id="stateShip" class="form-control" required>
-              <option value="XX">Please Select</option>
-            	<option value="AL">Alabama</option>
-            	<option value="AK">Alaska</option>
-            	<option value="AZ">Arizona</option>
-            	<option value="AR">Arkansas</option>
-            	<option value="CA">California</option>
-            	<option value="CO">Colorado</option>
-            	<option value="CT">Connecticut</option>
-            	<option value="DE">Delaware</option>
-            	<option value="DC">District Of Columbia</option>
-            	<option value="FL">Florida</option>
-            	<option value="GA">Georgia</option>
-            	<option value="HI">Hawaii</option>
-            	<option value="ID">Idaho</option>
-            	<option value="IL">Illinois</option>
-            	<option value="IN">Indiana</option>
-            	<option value="IA">Iowa</option>
-            	<option value="KS">Kansas</option>
-            	<option value="KY">Kentucky</option>
-            	<option value="LA">Louisiana</option>
-            	<option value="ME">Maine</option>
-            	<option value="MD">Maryland</option>
-            	<option value="MA">Massachusetts</option>
-            	<option value="MI">Michigan</option>
-            	<option value="MN">Minnesota</option>
-            	<option value="MS">Mississippi</option>
-            	<option value="MO">Missouri</option>
-            	<option value="MT">Montana</option>
-            	<option value="NE">Nebraska</option>
-            	<option value="NV">Nevada</option>
-            	<option value="NH">New Hampshire</option>
-            	<option value="NJ">New Jersey</option>
-            	<option value="NM">New Mexico</option>
-            	<option value="NY">New York</option>
-            	<option value="NC">North Carolina</option>
-            	<option value="ND">North Dakota</option>
-            	<option value="OH">Ohio</option>
-            	<option value="OK">Oklahoma</option>
-            	<option value="OR">Oregon</option>
-            	<option value="PA">Pennsylvania</option>
-            	<option value="RI">Rhode Island</option>
-            	<option value="SC">South Carolina</option>
-            	<option value="SD">South Dakota</option>
-            	<option value="TN">Tennessee</option>
-            	<option value="TX">Texas</option>
-            	<option value="UT">Utah</option>
-            	<option value="VT">Vermont</option>
-            	<option value="VA">Virginia</option>
-            	<option value="WA">Washington</option>
-            	<option value="WV">West Virginia</option>
-            	<option value="WI">Wisconsin</option>
-            	<option value="WY">Wyoming</option>
-            </select>
-          </div>
-        </div>
+          <form class="form-horizontal navColor shipForm container col-xs-4">
 
-        <div class="form-group">
-          <label for="zipShip" class="col-lg-2 control-label">ZIP Code</label>
-          <div class="col-lg-3">
-            <input type="number" class="form-control" id="zipShip" placeholder="ZIP" required>
-          </div>
-        </div>
+            <fieldset>
+              <legend>    <h1>Complete your order</h1>Enter Shipping Information</legend>
+              <div class="form-group">
+                <label for="firstNameShip" class="col-lg-2 control-label">Full Name</label>
+                <div class="col-lg-5">
+                  <input type="text" class="form-control" id="firstNameShip" placeholder="First Name" required>
+                  <input type="text" class="form-control" id="lastNameShip" placeholder="Last Name" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="Address1Ship" class="col-lg-2 control-label">Address Line 1</label>
+                <div class="col-lg-8">
+                  <input type="text" class="form-control" id="address1Ship" placeholder="Address" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="Address2ship" class="col-lg-2 control-label">Address Line 2</label>
+                <div class="col-lg-6">
+                  <input type="text" class="form-control" id="address2Ship" placeholder="Apt. #">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="cityShip" class="col-lg-2 control-label">City</label>
+                <div class="col-lg-5">
+                  <input type="text" class="form-control" id="cityShip" placeholder="City" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="state" class="col-lg-2 control-label">State</label>
+                <div class="col-lg-6">
+                  <select id="stateShip" class="form-control" required>
+                    <option disabled selected>Select a state</option>
+                  	<option value="AL">Alabama</option>
+                  	<option value="AK">Alaska</option>
+                  	<option value="AZ">Arizona</option>
+                  	<option value="AR">Arkansas</option>
+                  	<option value="CA">California</option>
+                  	<option value="CO">Colorado</option>
+                  	<option value="CT">Connecticut</option>
+                  	<option value="DE">Delaware</option>
+                  	<option value="DC">District Of Columbia</option>
+                  	<option value="FL">Florida</option>
+                  	<option value="GA">Georgia</option>
+                  	<option value="HI">Hawaii</option>
+                  	<option value="ID">Idaho</option>
+                  	<option value="IL">Illinois</option>
+                  	<option value="IN">Indiana</option>
+                  	<option value="IA">Iowa</option>
+                  	<option value="KS">Kansas</option>
+                  	<option value="KY">Kentucky</option>
+                  	<option value="LA">Louisiana</option>
+                  	<option value="ME">Maine</option>
+                  	<option value="MD">Maryland</option>
+                  	<option value="MA">Massachusetts</option>
+                  	<option value="MI">Michigan</option>
+                  	<option value="MN">Minnesota</option>
+                  	<option value="MS">Mississippi</option>
+                  	<option value="MO">Missouri</option>
+                  	<option value="MT">Montana</option>
+                  	<option value="NE">Nebraska</option>
+                  	<option value="NV">Nevada</option>
+                  	<option value="NH">New Hampshire</option>
+                  	<option value="NJ">New Jersey</option>
+                  	<option value="NM">New Mexico</option>
+                  	<option value="NY">New York</option>
+                  	<option value="NC">North Carolina</option>
+                  	<option value="ND">North Dakota</option>
+                  	<option value="OH">Ohio</option>
+                  	<option value="OK">Oklahoma</option>
+                  	<option value="OR">Oregon</option>
+                  	<option value="PA">Pennsylvania</option>
+                  	<option value="RI">Rhode Island</option>
+                  	<option value="SC">South Carolina</option>
+                  	<option value="SD">South Dakota</option>
+                  	<option value="TN">Tennessee</option>
+                  	<option value="TX">Texas</option>
+                  	<option value="UT">Utah</option>
+                  	<option value="VT">Vermont</option>
+                  	<option value="VA">Virginia</option>
+                  	<option value="WA">Washington</option>
+                  	<option value="WV">West Virginia</option>
+                  	<option value="WI">Wisconsin</option>
+                  	<option value="WY">Wyoming</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="zipShip" class="col-lg-2 control-label">ZIP Code</label>
+                <div class="col-lg-3">
+                  <input type="number" class="form-control" id="zipShip" placeholder="ZIP" required>
+                </div>
+              </div>
+
+            </fieldset>
+          </form>
+
+      <!-- Billing Address Information Form -->
+          <form class="form-horizontal navColor container billForm col-xs-4">
+            <fieldset>
+              <legend>Enter Billing Information</legend>
+              <div class="form-group">
+                <div class="form-group col-lg-12">
+                  Billing to the same address? Check the box and click here to save some time.
+                  <input type="checkbox" name="importShipping" id="checkboxImport" class="form-control" value="">
+                  <button type="button" class="btn btn-primary btn-small" name="importShip" id="importShip">I sure am!</button>
+                </div>
+                <label for="firstNameBill" class="col-lg-2 control-label">Full Name</label>
+                <div class="col-lg-5">
+                  <input type="text" class="form-control" id="firstNameBill" placeholder="First Name" required>
+                  <input type="text" class="form-control" id="lastNameBill" placeholder="Last Name" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="Address1SBill" class="col-lg-2 control-label">Address Line 1</label>
+                <div class="col-lg-8">
+                  <input type="text" class="form-control" id="address1Bill" placeholder="Address" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="Address2Bill" class="col-lg-2 control-label">Address Line 2</label>
+                <div class="col-lg-6">
+                  <input type="text" class="form-control" id="address2Bill" placeholder="Apt. #">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="cityBill" class="col-lg-2 control-label">City</label>
+                <div class="col-lg-5">
+                  <input type="text" class="form-control" id="cityBill" placeholder="City" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="state" class="col-lg-2 control-label">State</label>
+                <div class="col-lg-6">
+                  <select id="stateBill" class="form-control" required>
+                    <option disabled selected>Select a state</option>
+                  	<option value="AL">Alabama</option>
+                  	<option value="AK">Alaska</option>
+                  	<option value="AZ">Arizona</option>
+                  	<option value="AR">Arkansas</option>
+                  	<option value="CA">California</option>
+                  	<option value="CO">Colorado</option>
+                  	<option value="CT">Connecticut</option>
+                  	<option value="DE">Delaware</option>
+                  	<option value="DC">District Of Columbia</option>
+                  	<option value="FL">Florida</option>
+                  	<option value="GA">Georgia</option>
+                  	<option value="HI">Hawaii</option>
+                  	<option value="ID">Idaho</option>
+                  	<option value="IL">Illinois</option>
+                  	<option value="IN">Indiana</option>
+                  	<option value="IA">Iowa</option>
+                  	<option value="KS">Kansas</option>
+                  	<option value="KY">Kentucky</option>
+                  	<option value="LA">Louisiana</option>
+                  	<option value="ME">Maine</option>
+                  	<option value="MD">Maryland</option>
+                  	<option value="MA">Massachusetts</option>
+                  	<option value="MI">Michigan</option>
+                  	<option value="MN">Minnesota</option>
+                  	<option value="MS">Mississippi</option>
+                  	<option value="MO">Missouri</option>
+                  	<option value="MT">Montana</option>
+                  	<option value="NE">Nebraska</option>
+                  	<option value="NV">Nevada</option>
+                  	<option value="NH">New Hampshire</option>
+                  	<option value="NJ">New Jersey</option>
+                  	<option value="NM">New Mexico</option>
+                  	<option value="NY">New York</option>
+                  	<option value="NC">North Carolina</option>
+                  	<option value="ND">North Dakota</option>
+                  	<option value="OH">Ohio</option>
+                  	<option value="OK">Oklahoma</option>
+                  	<option value="OR">Oregon</option>
+                  	<option value="PA">Pennsylvania</option>
+                  	<option value="RI">Rhode Island</option>
+                  	<option value="SC">South Carolina</option>
+                  	<option value="SD">South Dakota</option>
+                  	<option value="TN">Tennessee</option>
+                  	<option value="TX">Texas</option>
+                  	<option value="UT">Utah</option>
+                  	<option value="VT">Vermont</option>
+                  	<option value="VA">Virginia</option>
+                  	<option value="WA">Washington</option>
+                  	<option value="WV">West Virginia</option>
+                  	<option value="WI">Wisconsin</option>
+                  	<option value="WY">Wyoming</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="zipBill" class="col-lg-2 control-label">ZIP Code</label>
+                <div class="col-lg-3">
+                  <input type="number" class="form-control" id="zipBill" placeholder="ZIP" required>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+
+
+    <!-- Credit Card Payment Form -->
+          <form class="form-horizontal navColor container billForm col-xs-4">
+            <fieldset>
+              <legend>Pay with Credit Card</legend>
+              <div class="form-group">
+                <label for="cardNum" class="col-lg-3 control-label">Card Number</label>
+                <div class="col-lg-6">
+                  <input type="number" class="form-control" id="cardNum" placeholder="xxxx-xxxx-xxxx-xxxx">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="cardExp" class="col-lg-3 control-label">Expiration date</label>
+                <div class="col-lg-3">
+                  <input type="text" class="form-control" id="cardExp" placeholder="MM/YY">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="ccvCode" class="col-lg-3 control-label">Three Digit Security Code</label>
+                <div class="col-lg-3">
+                  <input type="number" class="form-control" id="ccvCode" placeholder="XXX">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="col-lg-10 col-lg-offset-2">
+                  <button type="reset" class="btn btn-default">Cancel</button>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </main
+
+
+    <!-- Footer -->
+    <footer class="">
+      <div class="container row footerJerk navColor">
+        <section class="footer-column">
+          <h3 class="footer-h3">Visit Our Store</h3>
+          <br>
+          <img class="map" src="images/JavaStreetMap.png" width="75%" height="75%">
+          <p class="footerAddress">150 Java St<br>
+             Brooklyn, NY 11222</p>
+        </section>
+        <section class="footer-column">
+          <h3 class="footer-h3">About Stack O.F.</h3>
+          <br>
+          <a href="#" class="footerLinks">Our Founders</a>
+          <br>
+          <a href="#" class="footerLinks">Our History</a>
+          <br>
+          <a href="#" class="footerLinks">Sponsored Skaters</a>
+        </section>
+        <section class="footer-column">
+          <h3 class="footer-h3">Upcoming Events</h3>
+          <br>
+          <a href="#" class="footerLinks">Street League Skating World Championship</a>
+          <br>
+          <a href="#" class="footerLinks">X Games 2017</a>
+          <br>
+          <a href="#" class="footerLinks">2020 Summer Olympic Games</a>
+        </section>
+        <section class="footer-column">
+          <h3 class="footer-h3">Stack O.F. in the News</h3>
+          <br>
+          <a href="#" class="footerLinks">Tony Hawk says we're the best in the game!</a>
+          <br>
+          <a href="#" class="footerLinks">Andy "Brink" Brinker signs with Team Stack O.F.</a>
+        </section>
       </div>
-    </div>
-  </fieldset>
-</form>
-
-<!-- Billing Address Information Form -->
-    <form class="form-horizontal navColor container billForm col-xs-4">
-      <fieldset>
-        <legend>Enter Billing Information</legend>
-        <div class="form-group">
-          <div class="form-group col-lg-11">
-            Billing to the same address?
-            <button type="button" class="btn btn-primary btn-small" name="importShip" id="importShip">I sure am!</button>
-          </div>
-          <label for="firstNameBill" class="col-lg-2 control-label">Full Name</label>
-          <div class="col-lg-5">
-            <input type="text" class="form-control" id="firstNameBill" placeholder="First Name" required>
-            <input type="text" class="form-control" id="lastNameBill" placeholder="Last Name" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="Address1SBill" class="col-lg-2 control-label">Address Line 1</label>
-          <div class="col-lg-8">
-            <input type="text" class="form-control" id="address1Bill" placeholder="Address" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="Address2Bill" class="col-lg-2 control-label">Address Line 2</label>
-          <div class="col-lg-6">
-            <input type="text" class="form-control" id="address2Bill" placeholder="Apt. #">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="cityBill" class="col-lg-2 control-label">City</label>
-          <div class="col-lg-5">
-            <input type="text" class="form-control" id="cityBill" placeholder="City" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="state" class="col-lg-2 control-label">State</label>
-          <div class="col-lg-4">
-            <select id="stateBill" class="form-control" required>
-              <option value="XX">Select a state</option>
-            	<option value="AL">Alabama</option>
-            	<option value="AK">Alaska</option>
-            	<option value="AZ">Arizona</option>
-            	<option value="AR">Arkansas</option>
-            	<option value="CA">California</option>
-            	<option value="CO">Colorado</option>
-            	<option value="CT">Connecticut</option>
-            	<option value="DE">Delaware</option>
-            	<option value="DC">District Of Columbia</option>
-            	<option value="FL">Florida</option>
-            	<option value="GA">Georgia</option>
-            	<option value="HI">Hawaii</option>
-            	<option value="ID">Idaho</option>
-            	<option value="IL">Illinois</option>
-            	<option value="IN">Indiana</option>
-            	<option value="IA">Iowa</option>
-            	<option value="KS">Kansas</option>
-            	<option value="KY">Kentucky</option>
-            	<option value="LA">Louisiana</option>
-            	<option value="ME">Maine</option>
-            	<option value="MD">Maryland</option>
-            	<option value="MA">Massachusetts</option>
-            	<option value="MI">Michigan</option>
-            	<option value="MN">Minnesota</option>
-            	<option value="MS">Mississippi</option>
-            	<option value="MO">Missouri</option>
-            	<option value="MT">Montana</option>
-            	<option value="NE">Nebraska</option>
-            	<option value="NV">Nevada</option>
-            	<option value="NH">New Hampshire</option>
-            	<option value="NJ">New Jersey</option>
-            	<option value="NM">New Mexico</option>
-            	<option value="NY">New York</option>
-            	<option value="NC">North Carolina</option>
-            	<option value="ND">North Dakota</option>
-            	<option value="OH">Ohio</option>
-            	<option value="OK">Oklahoma</option>
-            	<option value="OR">Oregon</option>
-            	<option value="PA">Pennsylvania</option>
-            	<option value="RI">Rhode Island</option>
-            	<option value="SC">South Carolina</option>
-            	<option value="SD">South Dakota</option>
-            	<option value="TN">Tennessee</option>
-            	<option value="TX">Texas</option>
-            	<option value="UT">Utah</option>
-            	<option value="VT">Vermont</option>
-            	<option value="VA">Virginia</option>
-            	<option value="WA">Washington</option>
-            	<option value="WV">West Virginia</option>
-            	<option value="WI">Wisconsin</option>
-            	<option value="WY">Wyoming</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="zipBill" class="col-lg-2 control-label">ZIP Code</label>
-          <div class="col-lg-3">
-            <input type="number" class="form-control" id="zipBill" placeholder="ZIP" required>
-          </div>
-        </div>
-      </div>
-    </div>
-  </fieldset>
-</form>
-
-
-<!-- Credit Card Payment Form -->
-    <form class="form-horizontal navColor container billForm col-xs-4">
-      <fieldset>
-        <legend>Pay with Credit Card</legend>
-        <div class="form-group">
-          <label for="cardNum" class="col-lg-3 control-label">Card Number</label>
-          <div class="col-lg-6">
-            <input type="number" class="form-control" id="cardNum" placeholder="xxxx-xxxx-xxxx-xxxx">
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="cardExp" class="col-lg-3 control-label">Expiration date</label>
-          <div class="col-lg-3">
-            <input type="text" class="form-control" id="cardExp" placeholder="MM/YY">
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="ccvCode" class="col-lg-3 control-label">Three Digit Security Code</label>
-          <div class="col-lg-3">
-            <input type="number" class="form-control" id="ccvCode" placeholder="XXX">
-          </div>
-        </div>
-
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="col-lg-10 col-lg-offset-2">
-        <button type="reset" class="btn btn-default">Cancel</button>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </div>
-    </div>
-  </fieldset>
-</form>
-
-
-
+    </footer>
+    <legal>
+        &copy; 2016 Stack O.F. Boards
+    </legal>
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/checkout.js">
