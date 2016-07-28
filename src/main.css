@@ -6,14 +6,8 @@
 
 
 h1, h2, h3, h4 {
-<<<<<<< HEAD
   font-family: "vtks-rash", sans-serif;
-=======
-
-  font-family: "vtks-rash", sans-serif
->>>>>>> master
 }
-
 
 main {
   margin-left: 238px;
@@ -203,7 +197,6 @@ body {
   margin-top: 25px;
 }
 
-
 #board {
   max-width: 180px;
 }
@@ -241,4 +234,10 @@ legal {
   display: inline-block;
   text-align: center;
   max-width: 25%;
+}
+
+.footerJerk {
+  max-height: 280px;
+  display:inline-block;
+  
 }
