@@ -234,18 +234,15 @@ legal {
   padding: 5px;
 }
 
-<<<<<<< HEAD
-/*.cheap {
+.cheap {
   display: none;
 }
 
 .expensive {
   display: none;
-}*/
-=======
+}
 .billForm, .shipForm {
   padding: 20px;
   margin: 20px;
   border-radius: 30px;
 }
->>>>>>> master
