@@ -40,7 +40,7 @@ $("#masterBuy").click(function(event) {
     var address2Bill = $("#address2Bill").val();
     var companyBill = $("#companyBill").val();
     var cityBill = $("#cityBill").val();
-    var state = $('#stateBill option:selected').val();
+    var stateBill = $('#stateBill option:selected').val();
     var zipBill = $("#zipBill").val();
     var firstNameShip = $("#firstNameShip").val();
     var lastNameShip = $("#lastNameShip").val();
@@ -48,23 +48,24 @@ $("#masterBuy").click(function(event) {
     var address2Ship = $("#address2Ship").val();
     var companyShip = $("#companyShip").val();
     var cityShip = $("#cityShip").val();
-    var state = $('#stateShip option:selected').val();
+    var stateShip = $('#stateShip option:selected').val();
     var zipShip = $("#zipShip").val();
     var cardNum = $("cardNum").val();
     var ccvCode = $("ccvCode").val();
     var cardExp = $("cardExp").val();
 
-    var message = " * There is an error on the form!";
-    var message2 = " * You messed this form up badly!"
+    var message = " * You're missing input in a required field";
+    var message2 = " * Please enter a valid numeric value";
+
     console.log("User is " + firstNameBill);
 
-    if (firstNameBill.length < 1) {
-      $("#errorPane").removeClass('hidden'); $('#errorList').append(message + "<br>");
+    if((zipShip.length >9) || (zipShip.length <4) || (zipBill.length >9) || (zipBill.length <4) || (firstNameBill.length < 1) || (lastNameBill.length < 1) || (address1Bill.length < 1) || (cityBill.length < 1) || (stateBill == "Select a state") || (firstNameShip.length < 1) || (lastNameShip.length < 1) || (address1Ship.length < 1)) {
+      $('#errorList').append(message + "<br>")
+    }
+
+    else {
+      $('#errorList').append("Your order was successful! Your 3 items are on their way to "+ cityShip + " and your credit card has been charged $110.11. Have a radical day!");
     };
-
-
-
-
     // if (lastName.length < 5 || lastName[0].toUpperCase() !== lastName[0]) {
     //   $('.error1').removeClass('hidden'); $('.error1').append(message2 + "<br>");
     // }
