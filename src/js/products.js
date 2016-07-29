@@ -54,6 +54,22 @@ $( document ).ready(function() {
     console.log(filterSize);
   })
 
+  $('#emailForm').on('submit', function(e) {
+    e.preventDefault();
+
+    var userEmail = $('#header-email').val();
+    email = userEmail;
+
+    if (emailValidator(userEmail)) {
+      wiggle('#header-email', '30px', 40);
+      $('#header-message').replaceWith('<div id="header-message" class="input-err">You didn\'t think we\'d check?</div>');
+      $('.input-err').fadeIn(500).delay(2000).fadeOut(500);
+    } else {
+      $('#header-message').replaceWith('<div id="header-message" class="input-succ">Hang tight, we\'ll reach out!</div>');
+      $('.input-succ').fadeIn(500).delay(2000).fadeOut(500);
+      $('#header-email').val('');
+    };
+  });
 
 });
 
@@ -87,3 +103,24 @@ function sizeOfBoard(num) {
     return "Longboard";
   }
 }
+
+function wiggle(id, px, time) {
+  $(id).animate({
+    "margin-left": px
+  },time);
+  $(id).animate({
+    "margin-left": '-'+px
+  },time);
+  $(id).animate({
+    "margin-left": "0px"
+  },time);
+};
+
+function emailValidator(email) {
+  var specChar = "<>!#$%^&*()[]{}?:;|\"',/~`=";
+  if (email === '' || email === undefined || email.length < 7 || !email.includes('@') || !email.includes('.') || email.includes('@.') || email.indexOf('@') === 0 || email.indexOf('.') === email.length-1 || specCharCheck(specChar, email)) {
+    return true;
+  } else {
+    return false;
+  };
+};
