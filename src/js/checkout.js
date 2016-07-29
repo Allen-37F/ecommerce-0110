@@ -35,6 +35,15 @@ $("#masterBuy").click(function(event) {
 
 });
 
+$("#shipSubmit").click(function(event) {
+  event.preventDefault();
+});
+
+$("#billSubmit").click(function(event) {
+  event.preventDefault();
+});
+
+
 
   // function validateBillShip() {
   //   console.log("validating billing and shipping fields")
