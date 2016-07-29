@@ -52,61 +52,88 @@ $( document ).ready(function() {
     }
   }
 
-    var imgDisplayTime = 4000;
-    var transition_speed = 0;
+  //Carousel
 
-    var carouselSlide = $('.carouselBox');
-    var listItems = carouselSlide.children('li');
-    var listLen = listItems.length;
-    var i = 0;
+  var imgDisplayTime = 4000;
+  var transition_speed = 0;
 
-    var changeList = function() {
+  var carouselSlide = $('.carouselBox');
+  var listItems = carouselSlide.children('li');
+  var listLen = listItems.length;
+  var i = 0;
 
-      listItems.eq(i).fadeOut(transition_speed, function () {
-        i += 1;
-        if (i === listLen) {
-          i = 0;
-        };
-        listItems.eq(i).fadeIn(transition_speed);
-      });
+  var changeList = function() {
 
-    };
+    listItems.eq(i).fadeOut(transition_speed, function () {
+      i += 1;
+      if (i === listLen) {
+        i = 0;
+      };
+      listItems.eq(i).fadeIn(transition_speed);
+    });
 
-    var reverseList = function() {
+  };
 
-      listItems.eq(i).fadeOut(transition_speed, function () {
-        i -= 1;
-        if (i === listLen) {
-          i = 0;
-        };
-        listItems.eq(i).fadeIn(transition_speed);
-      });
+  var reverseList = function() {
 
-    };
+    listItems.eq(i).fadeOut(transition_speed, function () {
+      i -= 1;
+      if (i === listLen) {
+        i = 0;
+      };
+      listItems.eq(i).fadeIn(transition_speed);
+    });
 
-    listItems.not(':first').hide();
+  };
 
-    var newInterval = function(){
-      clearInterval(interval);
-      imgDisplayTime = 4000;
-      interval = setInterval(changeList, imgDisplayTime);
-    }
+  listItems.not(':first').hide();
 
-    var interval = setInterval(newInterval, imgDisplayTime);
-    newInterval(changeList, imgDisplayTime);
+  var newInterval = function(){
+    clearInterval(interval);
+    imgDisplayTime = 4000;
+    interval = setInterval(changeList, imgDisplayTime);
+  }
+
+  var interval = setInterval(newInterval, imgDisplayTime);
+  newInterval(changeList, imgDisplayTime);
 
 
-    $('.next').on('click', function() {
+  $('.next').on('click', function() {
       newInterval();
       changeList();
-    });
+  });
 
-    $('.prev').on('click', function() {
-      newInterval();
-      reverseList();
-    });
-    
+  $('.prev').on('click', function() {
+    newInterval();
+    reverseList();
+  });
+
+  //Promo Image Generation
+
+  function createPromos() {
+
+    for (var i = 0; i <3 ; i++) {
+      var promoNum = Math.floor((Math.random()*14) + 1);
+      $('.promos').append('<div class="promoItem"><img src="' + productInventory[promoNum].image + '"><p class="productName">' + productInventory[promoNum].name + '</p><br><p>Rating: ' + productInventory[promoNum].rating + ' out of 10</p><br><p>Price: ' + productInventory[promoNum].price + '</p></div>');
+    }
+  }
+  createPromos();
+
+
+  //Promo Image Hover
+
+  $(".promos img").on({
+    mouseenter: function () {
+      $('.promos').prepend('<div class="hoverMessage"><p>Click <a href="#">here</a> to add this to the cart</p></div>')
+    },
+    mouseleave: function () {
+      $('.hoverMessage').fadeOut(1000);
+    }
+  });
+
+
 });
+
 
 function wiggle(id, px, time) {
   $(id).animate({
