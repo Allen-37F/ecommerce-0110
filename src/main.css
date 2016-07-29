@@ -241,6 +241,7 @@ legal {
 .expensive {
   display: none;
 }
+
 .billForm, .shipForm {
   padding: 20px;
   margin: 20px;
