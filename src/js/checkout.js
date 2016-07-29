@@ -1,6 +1,8 @@
 $(document).ready(function(){
   console.log( "ready!" );
 
+//all checkout validation functions in one file
+
 
 // Lines 6 - 30 control the import of values from shipping into billing.
   $('#importShip').click(function(){
@@ -28,6 +30,7 @@ $(document).ready(function(){
   });
 });
 
+//is there a way to functionalize this with the above?
 
 // The following command validates every damn thing when the Submit button in the credit card window is clicked.
 $("#masterBuy").click(function(event) {
@@ -78,6 +81,7 @@ $("#masterBuy").click(function(event) {
       $(this).find("input,textarea,select").val('').end();
   });
 
+//dropdowns could be in the same file
 
 // this handles the dropdown in the nav bar
   window.onclick = function(event) {
