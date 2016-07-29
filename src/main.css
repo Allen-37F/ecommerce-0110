@@ -31,7 +31,7 @@ body {
 
 /* Carousel */
 
-.carouselBox {
+/*.carouselBox {
   width: 1200px;
   background-color: transparent;
   margin: 20px auto;
@@ -42,7 +42,6 @@ body {
 
   background-color: transparent;
   width: 100%;
-  /*display: none;*/
 }
 
 .carouselBox img {
@@ -61,24 +60,38 @@ body {
 
 .prev {
   left: 50px;
-}
+}*/
 
+/*Promo Image Selectors*/
 
-.promos {
+/*.promos {
   display: inline-block;
   box-sizing: border-box;
   height: auto;
-  margin: 25px;
-  width: auto;
+  margin: 150px;
+  width: 75%;
 
   border: 2px solid black;
   background-color: rgba(56, 78, 130, .5);
 }
 
+.promoItem {
+  display: inline-block;
+  margin: 23px;
+}
+
 .promos img {
   margin: 25px;
   opacity: .8;
+  display: inline-block;
+  max-height: 200px;
+  width: 200px;
 }
+
+.promos p {
+  text-align: center;
+  color: white;
+}*/
 
 .signup {
   width: 80%;
@@ -127,11 +140,8 @@ body {
 }
 
 .myCart{
-  position: fixed;
-  top:5px;
-  right:25px;
-  width: 250px;
-  height: 65px;
+  position:relative;
+   right: 30px;
 }
 
 .dropdown:hover .dropdown-content {
@@ -224,6 +234,7 @@ legal {
   padding: 5px;
 }
 
+<<<<<<< HEAD
 /*.cheap {
   display: none;
 }
@@ -231,3 +242,10 @@ legal {
 .expensive {
   display: none;
 }*/
+=======
+.billForm, .shipForm {
+  padding: 20px;
+  margin: 20px;
+  border-radius: 30px;
+}
+>>>>>>> master
