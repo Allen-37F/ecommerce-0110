@@ -1,6 +1,8 @@
 $( document ).ready(function() {
     console.log( "ready!" );
 
+    //Put this in email validation file
+
     var email;
 
     $('#signup-form').on('submit', function(e) {
@@ -8,6 +10,8 @@ $( document ).ready(function() {
 
       var userEmail = $('#signup-input').val();
       email = userEmail;
+
+      //Lots of same code here...can we functionalize it?
 
       if (emailValidator(userEmail)) {
         wiggle('#signup-input', '40px', 40);
@@ -19,6 +23,8 @@ $( document ).ready(function() {
         $('#signup-input').val('');
       };
     });
+
+    //Totally a copy from above...let's functionalize and call it for both forms
 
     $('#emailForm').on('submit', function(e) {
       e.preventDefault();
@@ -37,6 +43,8 @@ $( document ).ready(function() {
       };
     });
 
+  //Make separate js file for navbar?
+
   // Close the dropdown menu if the user clicks outside of it
   window.onclick = function(event) {
     if (!event.target.matches('.dropbtn')) {
@@ -51,6 +59,8 @@ $( document ).ready(function() {
       }
     }
   }
+
+  //Make separate carousel file
 
   //Carousel
 
@@ -108,6 +118,8 @@ $( document ).ready(function() {
     reverseList();
   });
 
+  //make separate promo image file
+
   //Promo Image Generation
 
   function createPromos() {
@@ -134,6 +146,7 @@ $( document ).ready(function() {
 
 });
 
+//This goes under email validation
 
 function wiggle(id, px, time) {
   $(id).animate({
@@ -147,11 +160,15 @@ function wiggle(id, px, time) {
   },time);
 };
 
+//this should be in navbar
+
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 };
+
+//this goes into email validation file
 
 function emailValidator(email) {
   var specChar = "<>!#$%^&*()[]{}?:;|\"',/~`=";

@@ -3,6 +3,8 @@ $( document ).ready(function() {
 
   var allProducts = [];
 
+  //Make JS file just for ajax calls?
+
   function getProductInfo() {
     $.ajax({
       url: 'https://galvanize-student-apis.herokuapp.com/gcommerce/products',
@@ -24,6 +26,8 @@ $( document ).ready(function() {
   };
   getProductInfo();
 
+  //Make JS file just for filters
+
   $('#filterPrice').change(function() {
     var filterPrice= $('#filterPrice').val();
     if (filterPrice === 'product') {
@@ -36,6 +40,8 @@ $( document ).ready(function() {
       $('.expensive').show();
     }
   })
+
+  //same as above with different class names. Let's make it a function?
 
   $('#filterSize').change(function() {
     var filterSize= $('#filterSize').val();
@@ -53,6 +59,8 @@ $( document ).ready(function() {
     }
     console.log(filterSize);
   })
+
+  //goes into email validation file
 
   $('#emailForm').on('submit', function(e) {
     e.preventDefault();
@@ -73,6 +81,8 @@ $( document ).ready(function() {
 
 });
 
+//put this in the ajax file
+
 function Product(desc, id, price, size) {
   this.description = desc;
   this.id = id;
@@ -85,6 +95,8 @@ function Product(desc, id, price, size) {
 function appendToDom(eachProduct) {
   $('.productList').append('<div class=" product product' + eachProduct.id + ' ' + eachProduct.size + ' ' + eachProduct.range + '"><img class="productImage" src="' + eachProduct.img + '"><p class="' + eachProduct.size + '">' + eachProduct.size + '</p><p class="description">' + eachProduct.description + '</p><p>$' + eachProduct.price + '</p></div>');
 }
+
+//filter file for these
 
 function priceRanges(num) {
   var price = parseFloat(num.replace('$', '')).toFixed(2);
@@ -103,6 +115,8 @@ function sizeOfBoard(num) {
     return "Longboard";
   }
 }
+
+//duplicate of other email validation functions
 
 function wiggle(id, px, time) {
   $(id).animate({
