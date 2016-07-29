@@ -127,11 +127,8 @@ body {
 }
 
 .myCart{
-  position: fixed;
-  top:5px;
-  right:25px;
-  width: 250px;
-  height: 65px;
+  position:relative;
+   right: 30px;
 }
 
 .dropdown:hover .dropdown-content {
@@ -222,4 +219,10 @@ legal {
 .cartPic {
   max-width: 100px;
   padding: 5px;
+}
+
+.billForm, .shipForm {
+  padding: 20px;
+  margin: 20px;
+  border-radius: 30px;
 }
