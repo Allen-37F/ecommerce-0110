@@ -108,9 +108,14 @@ $( document ).ready(function() {
 
   //Promo Image Generation
 
-  // function createPromos() {
-  //
-  // createPromos();
+  function createPromos() {
+
+    for (var i = 0; i <3 ; i++) {
+      var promoNum = Math.floor((Math.random()*14) + 1);
+      $('.promos').append('<div class="promoItem"><img src="' + productInventory[promoNum].image + '"><p>' + productInventory[promoNum].name + '</p><br><p>Rating: ' + productInventory[promoNum].rating + ' out of 10</p><br><p>Price: ' + productInventory[promoNum].price + '</p></div>');
+    }
+  }
+  createPromos();
 
 });
 
