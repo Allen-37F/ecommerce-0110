@@ -206,20 +206,20 @@ legal {
   display: block;
 }
 
-.fullProduct {
+.product {
   max-width: 25%;
   text-align: center;
   display: inline-block;
 }
 
-.fullProduct img {
+.productList img {
   max-height: 250px;
   max-width: 250px;
   margin: 0 auto;
 }
 
-.sortBtn {
-  display: inline-block;
+.filterOptions {
+  display: block;
   position: relative;
 }
 
@@ -234,8 +234,18 @@ legal {
   padding: 5px;
 }
 
+<<<<<<< HEAD
+/*.cheap {
+  display: none;
+}
+
+.expensive {
+  display: none;
+}*/
+=======
 .billForm, .shipForm {
   padding: 20px;
   margin: 20px;
   border-radius: 30px;
 }
+>>>>>>> master
