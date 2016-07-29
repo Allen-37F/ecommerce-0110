@@ -12,11 +12,18 @@
     <section class="productList container">
       <div class="filterOptions">
         <select class="filterPrice" id="filterPrice">
-          <option id="cheap" value='cheap' disabled selected>Price Filter</option>
+          <option disabled selected>Price Filter</option>
+          <option value='product'>All</option>
           <option id="cheap" value='cheap'>Cheap</option>
           <option id="expensive" value='expensive'>Expensive</option>
         </select>
-        <select type="button" class="filterBtn sortSize" id="sizeFilter">Filter by Type</select>
+        <select class="filterSize" id="filterSize">
+          <option disabled selected>Size Filter</option>
+          <option value='product'>All</option>
+          <option id="Fingerboard" value='Fingerboard'>Fingerboard</option>
+          <option id="Skateboard" value='Skateboard'>Skateboard</option>
+          <option id="Longboard" value='Longboard'>Longboard</option>
+        </select>
       </div>
     </section>
 

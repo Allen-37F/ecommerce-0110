@@ -50,10 +50,10 @@ body {
   max-height: 500px;
 }
 
-/*.carBtn {
+.carBtn {
   position: absolute;
   margin-top: 450px;
-}*/
+}
 
 .next {
   right: 50px;
@@ -196,20 +196,20 @@ legal {
   display: block;
 }
 
-.fullProduct {
+.product {
   max-width: 25%;
   text-align: center;
   display: inline-block;
 }
 
-.fullProduct img {
+.productList img {
   max-height: 250px;
   max-width: 250px;
   margin: 0 auto;
 }
 
 .filterOptions {
-  display: inline-block;
+  display: block;
   position: relative;
 }
 
@@ -223,3 +223,11 @@ legal {
   max-width: 100px;
   padding: 5px;
 }
+
+/*.cheap {
+  display: none;
+}
+
+.expensive {
+  display: none;
+}*/
