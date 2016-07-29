@@ -50,10 +50,10 @@ body {
   max-height: 500px;
 }
 
-.carBtn {
+/*.carBtn {
   position: absolute;
   margin-top: 450px;
-}
+}*/
 
 .next {
   right: 50px;
@@ -208,7 +208,7 @@ legal {
   margin: 0 auto;
 }
 
-.sortBtn {
+.filterOptions {
   display: inline-block;
   position: relative;
 }

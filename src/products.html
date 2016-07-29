@@ -10,9 +10,13 @@
   <body>
 
     <section class="productList container">
-      <div class="productBtn">
-        <button type="button" class="sortBtn" id="priceSort">Sort by Price</button>
-        <button type="button" class="sortBtn" id="sizeSort">Sort by Size</button>
+      <div class="filterOptions">
+        <select class="filterPrice" id="filterPrice">
+          <option id="cheap" value='cheap' disabled selected>Price Filter</option>
+          <option id="cheap" value='cheap'>Cheap</option>
+          <option id="expensive" value='expensive'>Expensive</option>
+        </select>
+        <select type="button" class="filterBtn sortSize" id="sizeFilter">Filter by Type</select>
       </div>
     </section>
 
