@@ -52,6 +52,8 @@ $( document ).ready(function() {
     }
   }
 
+  //Carousel
+
   var imgDisplayTime = 4000;
   var transition_speed = 0;
 
@@ -112,12 +114,25 @@ $( document ).ready(function() {
 
     for (var i = 0; i <3 ; i++) {
       var promoNum = Math.floor((Math.random()*14) + 1);
-      $('.promos').append('<div class="promoItem"><img src="' + productInventory[promoNum].image + '"><p>' + productInventory[promoNum].name + '</p><br><p>Rating: ' + productInventory[promoNum].rating + ' out of 10</p><br><p>Price: ' + productInventory[promoNum].price + '</p></div>');
+      $('.promos').append('<div class="promoItem"><img src="' + productInventory[promoNum].image + '"><p class="productName">' + productInventory[promoNum].name + '</p><br><p>Rating: ' + productInventory[promoNum].rating + ' out of 10</p><br><p>Price: ' + productInventory[promoNum].price + '</p></div>');
     }
   }
   createPromos();
 
+
+  //Promo Image Hover
+
+  $(".promos img").on({
+    mouseenter: function () {
+      $('.promos').prepend('<div class="hoverMessage"><p>Click <a href="#">here</a> to add this to the cart</p></div>')
+    },
+    mouseleave: function () {
+      $('.hoverMessage').fadeOut(1000);
+    }
+  });
+
 });
+
 
 function wiggle(id, px, time) {
   $(id).animate({

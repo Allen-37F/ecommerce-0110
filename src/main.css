@@ -31,7 +31,7 @@ body {
 
 /* Carousel */
 
-.carouselBox {
+/*.carouselBox {
   width: 1200px;
   background-color: transparent;
   margin: 20px auto;
@@ -42,7 +42,6 @@ body {
 
   background-color: transparent;
   width: 100%;
-  /*display: none;*/
 }
 
 .carouselBox img {
@@ -61,10 +60,11 @@ body {
 
 .prev {
   left: 50px;
-}
+}*/
 
+/*Promo Image Selectors*/
 
-.promos {
+/*.promos {
   display: inline-block;
   box-sizing: border-box;
   height: auto;
@@ -91,7 +91,7 @@ body {
 .promos p {
   text-align: center;
   color: white;
-}
+}*/
 
 .signup {
   width: 80%;
