@@ -59,6 +59,7 @@ $("#masterBuy").click(function(event) {
 
     console.log("User is " + firstNameBill);
 
+// I could've defined  smaller functions for each comparison and called them in a 'for each' loop
     if((zipShip.length >9) || (zipShip.length <4) || (zipBill.length >9) || (zipBill.length <4) || (firstNameBill.length < 1) || (lastNameBill.length < 1) || (address1Bill.length < 1) || (cityBill.length < 1) || (firstNameShip.length < 1) || (lastNameShip.length < 1) || (address1Ship.length < 1)) {
       $('#errorList').append(message + "<br>")
     }
